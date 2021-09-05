@@ -21,4 +21,7 @@ public class UserInfo {
 
     @Column(name="age") 
     private int age; 
+    
+    @Column(name="level") 
+    private int level; 
 }
