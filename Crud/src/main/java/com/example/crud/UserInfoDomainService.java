@@ -37,9 +37,13 @@ public class UserInfoDomainService {
 		log.debug("userinfo1.getId() : "+ userinfo1.getId()); 
 		log.debug("userinfo1.getName() : "+ userinfo1.getName()); 
 		log.debug("userinfo1.getAge() : "+ userinfo1.getAge());
+		log.debug("userinfo1.getLevel() : "+ userinfo1.getLevel());
 		userinfo1.setId(userInfo.getId()); 
 		userinfo1.setName(userInfo.getName()); 
-		userinfo1.setAge(userInfo.getAge()); userInfoRepository.save(userinfo1); 
+		userinfo1.setAge(userInfo.getAge()); 
+		userinfo1.setLevel(userInfo.getLevel());
+		
+		userInfoRepository.save(userinfo1); 
 	} 
 		
 		
