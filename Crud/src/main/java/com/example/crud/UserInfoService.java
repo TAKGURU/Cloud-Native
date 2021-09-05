@@ -22,8 +22,13 @@ public class UserInfoService {
 		return userInfoDto; 
 	} 
 	
-	public UserInfoDto createUserInfo(UserInfoDto userInfoDto) { 
-		UserInfo userInfo = new UserInfo(); 
+	public UserInfoDto createUserInfo(UserInfoDto userInfoDto) {
+		
+		UserInfo userInfo = userInfoDomainService.getUserInfo(userInfoDto.getName()); 
+		
+		if(userInfo == null)
+			userInfo = new UserInfo();
+		  
 		log.debug("userInfoDto.getId():"+userInfoDto.getId()); 
 		userInfo.setId(userInfoDto.getId()); 
 		userInfo.setName(userInfoDto.getName()); 
@@ -32,7 +37,7 @@ public class UserInfoService {
 		userInfoDto.setId(userInfo.getId()); 
 		userInfoDto.setName(userInfo.getName()); 
 		userInfoDto.setAge(userInfo.getAge()); 
-		return userInfoDto; 
+		return userInfoDto;
 	} 
 	
 	public UserInfoDto updateUserInfo(String name, UserInfoDto userInfoDto) { 
