@@ -2,7 +2,11 @@
 
 # Step 01
 
-STS4 다운로드, Crud.zip 적용
+STS4 다운로드 및 설치
+
+git clone https://github.com/TAKGURU/Spring-Devops.git
+
+Curd.zip 적용
 
 
 
