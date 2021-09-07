@@ -66,7 +66,9 @@ Application 기동
 
 Scouter Client 설치(윈도우)
 
-    https://github.com/scouter-project/scouter/releases/scouter.client.product-win32.win32.x86_64.zip
+    https://github.com/scouter-project/scouter/releases/
+    
+    scouter.client.product-win32.win32.x86_64.zip 다운로드
     
 
 Scouter Client start (윈도우 기준)
