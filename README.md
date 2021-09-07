@@ -40,7 +40,7 @@ Scouter 설치
     
 Scouter 압축풀기
     
-    tar -zxvf scouter-all-2.12.0.1.SNAPSHOT.tar.gz![image](https://user-images.githubusercontent.com/90096850/132230504-c7cfe747-f3ce-4cb0-91dd-17816bbda19e.png)
+    tar -zxvf scouter-all-2.12.0.1.SNAPSHOT.tar.gz
     
     
 Application에 agent 설정하기
