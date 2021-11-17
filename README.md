@@ -141,11 +141,14 @@ Node Exporter 실행
 # Step 06 - Grafana
 
 Grafana 설치
+    
     wget https://dl.grafana.com/oss/release/grafana_7.5.2_amd64.deb 
     sudo dpkg -i grafana_7.5.2_amd64.deb 
 
 Grafana 실행
+    
     sudo service grafana-server start 
 
 실행 상태 확인 
+    
     sudo service grafana-server status
