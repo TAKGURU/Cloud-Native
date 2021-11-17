@@ -110,3 +110,19 @@ Prometheus Config Check
     static_configs:
     - targets: ['localhost:9090']
 
+    global (기본적인 전역설정)
+    scrape_interval : 얼마나 자주 메트릭(targets)을 수집할지 설정. 기본 1분
+    evaluation_interval : 얼마나 자주 규칙(rules)을 평가할지 설정. 기본 1분
+    scrape_configs (메트릭을 수집할 엔드포인트로 여기서는 prometheus 서버 자신을 가리키는 설정을 했다. 여러개 설정이 가능하다.)
+
+    job_name : 잡 이름 설정
+    static_config : 긁어하는 방법에 대한 목표 및 파라미터 세트를 지정.
+    
+Prometheus 기동
+    
+    $ ./prometheus
+    
+Prometheus 확인
+
+    http://자신의ip주소:9090/
+    
