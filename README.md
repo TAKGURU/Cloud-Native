@@ -78,9 +78,35 @@ Scouter Client start (윈도우 기준)
     Password : 패스워드 또한 아이디와 동일하게 기본값으로 admin으로 설정되어있다.
 
 
+# Step 04 - Prometheus
 
+Prometheus 설치    
 
+    wget https://github.com/prometheus/prometheus/releases/download/v2.20.1/prometheus-2.20.1.linux-amd64.tar.gz
 
+Prometheus 압축풀기
+
+    tar zxvf prometheus-2.20.1.linux-amd64.tar.gz
+
+Prometheus Config Check
     
+    $ cd prometheus-2.20.1.linux-amd64/
+    $ nano prometheus.yml
+    
+    # my global config
+    global:
+      scrape_interval:     10s # Set the scrape interval to every 10 seconds. Default is every 1 minute.
+      evaluation_interval: 10s # Evaluate rules every 10 seconds. The default is every 1 minute.
+      # scrape_timeout is set to the global default (10s).
 
+    # A scrape configuration containing exactly one endpoint to scrape:
+    # Here it's Prometheus itself.
+    scrape_configs:
+    # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+    - job_name: 'prometheus'
+
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.                                                                                        
+    static_configs:
+    - targets: ['localhost:9090']
 
