@@ -126,3 +126,26 @@ Prometheus 확인
 
     http://자신의ip주소:9090/
     
+# Step 05 - Node Exporter
+
+Node Exporter 설치
+
+    wget wget https://github.com/prometheus/node_exporter/releases/download/v1.1.2/node_exporter-1.1.2.linux-amd64.tar.gz
+    tar xvfz node_exporter-1.1.2.linux-amd64.tar.gz
+    cd node_exporter-1.1.2.linux-amd64/
+    
+Node Exporter 실행
+    
+    ./node_exporter
+
+# Step 06 - Grafana
+
+Grafana 설치
+    wget https://dl.grafana.com/oss/release/grafana_7.5.2_amd64.deb 
+    sudo dpkg -i grafana_7.5.2_amd64.deb 
+
+Grafana 실행
+    sudo service grafana-server start 
+
+실행 상태 확인 
+    sudo service grafana-server status
